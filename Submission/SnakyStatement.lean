@@ -57,7 +57,6 @@ open OAI.SnakyPrototype OAI.SnakyPrototype.OrdinaryStrategy
 Smaller natural bounds are better; no finite board envelope is imposed. -/
 def Bound (n : ℕ) : Prop :=
   ∃ σ : Policy Cell,
-    (∀ r M B, σ r M B ∉ M ∧ σ r M B ∉ B) ∧
     ∀ β : ℕ → Cell, LegalRepliesBeforeFinal σ n β ∅ ∅ →
       HasSnaky (playState σ n β ∅ ∅ n).1 ∧
       (playState σ n β ∅ ∅ n).1.card = n ∧
