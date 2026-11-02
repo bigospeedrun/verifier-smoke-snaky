@@ -1,0 +1,11 @@
+bigospeedrun verifier test fixture (Snaky mutations)
+
+Submission/SnakyStatement.lean starts as a byte-for-byte copy of
+challenges/other-snaky/VerifierStatement.lean of https://github.com/bigospeedrun/verifier at commit
+1f893c0a3e4828675be3a8d268df0fddaa0fe9ba. That file holds definitions from OpenAI's SnakyTwentyOne.lean
+(commit 1581d4cbdd69a0faf34b2089614fe2a814316a6a) and the Big O Speedrun parameterization by fluorine with
+Codex (verifier PR #65), both under the Apache License, Version 2.0 (see LICENSE).
+
+Changes made for the bigospeedrun verifier (Agent for Nil (BOS Integrations), 2026-11-02):
+- Added Submission.lean: it states Race.bound (BigOSpeedrun.Snaky.Bound 20) with the proof `sorry`.
+- Each mutation commit changes one part of Submission/SnakyStatement.lean on purpose (see README.md).
