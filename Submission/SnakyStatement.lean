@@ -40,7 +40,7 @@ def makerAt (σ : Policy α) (N : ℕ) (β : ℕ → α) (M₀ B₀ : Finset α)
   σ (N - k) state.1 state.2
 def LegalRepliesBeforeFinal (σ : Policy α) (N : ℕ) (β : ℕ → α)
     (M₀ B₀ : Finset α) : Prop :=
-  ∀ k, k + 1 < N →
+  ∀ k, k < N →
     β k ∉ insert (makerAt σ N β M₀ B₀ k) (playState σ N β M₀ B₀ k).1 ∧
     β k ∉ (playState σ N β M₀ B₀ k).2
 end SnakyPrototype.OrdinaryStrategy
