@@ -11,7 +11,7 @@ namespace OAI
 namespace SnakyPrototype
 variable {α : Type*} [DecidableEq α]
 abbrev Cell := ℤ × ℤ
-def snaky : Finset Cell := {(0, 0), (1, 0), (2, 0), (3, 0), (3, 1), (4, 1)}
+def snaky : Finset Cell := {(0, 0), (1, 0), (2, 0), (3, 0), (3, 1), (4, 2)}
 def orient (r : Fin 8) (p : Cell) : Cell :=
   match r.val with
   | 0 => (p.1, p.2)
